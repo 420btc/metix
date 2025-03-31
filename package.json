@@ -1,0 +1,55 @@
+{
+  "name": "2.0.5",
+  "version": "1.0.0",
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "tunnel": "expo start --tunnel",
+    "clean": "rm -rf node_modules && npm cache clean --force",
+    "reinstall": "npm run clean && npm install",
+    "reset": "expo r -c",
+    "build": "expo export:web",
+    "vercel-build": "CI=false expo export:web",
+    "deploy": "vercel"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "~1.17.3",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "expo": "~47.0.12",
+    "expo-crypto": "~12.0.0",
+    "expo-linear-gradient": "~12.0.1",
+    "expo-status-bar": "~1.4.2",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-native": "0.70.8",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-safe-area-context": "4.4.1",
+    "react-native-screens": "~3.18.0",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "~0.18.9",
+    "stream-browserify": "^3.0.0",
+    "util": "^0.12.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@expo/webpack-config": "^0.17.2",
+    "@types/react": "~18.0.14",
+    "@types/react-native": "~0.70.6",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "typescript": "^4.6.3",
+    "vercel": "^28.0.0"
+  },
+  "private": true,
+  "engines": {
+    "node": "16.x"
+  }
+}
