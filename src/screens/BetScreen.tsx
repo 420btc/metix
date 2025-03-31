@@ -232,35 +232,6 @@ const BetScreen: React.FC = () => {
           )}
         </View>
 
-        {selectedOption !== 'Tornado' && (
-          <View style={styles.inputGroup}>
-            <Text style={styles.inputLabel}>Nivel de Apalancamiento</Text>
-            <View style={styles.leverageContainer}>
-              {leverageOptions.map((option, index) => {
-                // Parse the string option: remove 'x'
-                const lev = parseInt(option.replace('x',''), 10);
-                return (
-                  <TouchableOpacity 
-                    key={index}
-                    style={[
-                      styles.leverageOption, 
-                      leverage === lev && styles.selectedLeverage
-                    ]}
-                    onPress={() => setLeverage(lev)}
-                  >
-                    <Text style={[
-                      styles.leverageText,
-                      leverage === lev && styles.selectedLeverageText
-                    ]}>
-                      {option}
-                    </Text>
-                  </TouchableOpacity>
-                );
-              })}
-            </View>
-          </View>
-        )}
-
         <View style={styles.potentialWinContainer}>
           <Text style={styles.potentialWinLabel}>Ganancia potencial:</Text>
           <Text style={styles.potentialWinValue}>
